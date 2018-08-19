@@ -8,7 +8,7 @@ before(done => {
   // MongoDB connection
   mongoose
     .connect(
-      "mongodb://localhost/testaroo",
+      "mongodb://localhost:27017/testaroo",
       { useNewUrlParser: true }
     )
     .then(() => {
@@ -18,12 +18,14 @@ before(done => {
     .catch(err => console.log("MongoDB connection error", err));
 });
 
-/*
-mongoose.connection
-  .once("open", () => {
-    console.log("DB connection open");
-  })
-  .on("error", error => {
-    console.log("DB error: " + error);
-  });
-*/
+// Drop collection before each test
+beforeEach(() => {
+  mongoose.connection.collections.mariochars
+    .drop()
+    .then(() => {
+      console.log("mariochars collection dropped");
+    })
+    .catch(err =>
+      console.log("Error while dropping mariochars collection", err)
+    );
+});
