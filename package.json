@@ -7,7 +7,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "mongoose": "^5.2.9"
+    "mongoose": "^5.4.11"
   },
   "devDependencies": {
     "mocha": "^5.2.0"
