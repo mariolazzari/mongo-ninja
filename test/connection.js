@@ -7,10 +7,7 @@ mongoose.Promise = global.Promise;
 before(done => {
   // MongoDB connection
   mongoose
-    .connect(
-      "mongodb://localhost:27017/testaroo",
-      { useNewUrlParser: true }
-    )
+    .connect("mongodb://localhost:27017/testaroo", { useNewUrlParser: true })
     .then(() => {
       console.log("MongoDB connected");
       done();

@@ -4,14 +4,14 @@ const Schema = mongoose.Schema;
 // Book schema
 const BookSchema = new Schema({
   name: String,
-  pages: Number
+  pages: Number,
 });
 
 // Author schema
 const AuthorSchema = new Schema({
   name: String,
   age: Number,
-  books: [BookSchema] // nesting schema
+  books: [BookSchema], // nesting schema
 });
 
 const Author = mongoose.model("author", AuthorSchema);

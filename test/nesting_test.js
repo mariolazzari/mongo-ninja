@@ -12,7 +12,7 @@ describe("Nesting records", () => {
   it("Creates author with nested books", done => {
     let pat = new Author({
       name: "Patrick",
-      books: [{ title: "Books one", pages: 300 }]
+      books: [{ title: "Books one", pages: 300 }],
     });
     pat.save().then(() => {
       Author.findOne({ name: "Patrick" }).then(record => {
@@ -26,7 +26,7 @@ describe("Nesting records", () => {
   it("Adds a book to an author", done => {
     let pat = new Author({
       name: "Patrick",
-      books: [{ title: "Books one", pages: 300 }]
+      books: [{ title: "Books one", pages: 300 }],
     });
     pat.save().then(() => {
       Author.findOne({ name: "Patrick" }).then(record => {

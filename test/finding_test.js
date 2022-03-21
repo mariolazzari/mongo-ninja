@@ -5,7 +5,7 @@ describe("Finding records", () => {
   let char;
   beforeEach(done => {
     char = new MarioChar({
-      name: "Mario"
+      name: "Mario",
     });
 
     char

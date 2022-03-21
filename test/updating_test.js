@@ -6,7 +6,7 @@ describe("Updating records", () => {
   beforeEach(done => {
     char = new MarioChar({
       name: "Mario",
-      weight: 50
+      weight: 50,
     });
 
     char

@@ -5,7 +5,7 @@ describe("Saving records", () => {
   it("Saves a record to DB", () => {
     const char = new MarioChar({
       name: "Mario",
-      weigth: 75
+      weigth: 75,
     });
 
     char
